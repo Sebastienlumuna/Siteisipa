@@ -20,8 +20,11 @@ Route::get('/programmes', [PagesController::class, 'programmes'])->name('progrra
 Route::get('/etudiants', [PagesController::class, 'etudiants'])->name('etudiants');
 Route::get('/filieres', [PagesController::class, 'filieres'])->name('filieres');
 Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
-Route::get('/inscription', [InscriptionController::class, 'inscriptionview'])->name('inscription');
 
+Route::controller(InscriptionController::class)->group(function(){
+    Route::post('/inscription', 'admisions')->name('admission');
+    Route::get('/inscription', 'inscriptionview')->name('inscription');
+});
 
 // view de filieres
 

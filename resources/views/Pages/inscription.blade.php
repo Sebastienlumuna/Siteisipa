@@ -17,6 +17,13 @@
     </div>
 </div>
 <!-- Page Header End -->
+    {{-- afficahge des messages de succès --}}
+    @if(session('success'))
+    <div class="alert alert-success text-center mx-5" role="alert">
+        {{ session('success') }}
+      </div>
+    @endif
+
 <!-- Conditions d'inscription Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
@@ -138,7 +145,7 @@
         <div class="row g-4">
             <div class="col-12">
                 <h2 class=" text-center mb-4">Formulaire d'Inscription</h2>
-                <form class="wow fadeInUp" data-wow-delay="0.3s">
+                <form  action="{{ route('admission') }}" method="POST" class="wow fadeInUp" data-wow-delay="0.3s" >
                     @csrf
                     {{-- composent input --}}
                     <div class="row g-3">
@@ -149,34 +156,42 @@
                          <div class="col-md-6">
                         <x-input name="postnom" label="postnom" type="text" />
                           </div>
+
                           <div class="col-md-6">
                         <x-input name="prenom" label="prenom" type="text" />
                             </div>
+
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-select" id="Genre">
-                                    <option selected disabled>Sélectionnez Votre Genre</option>
+                                <select class="form-select @error('sexe') is-invalid @enderror" value="{{ old('sexe')}}" id="sexe" name="sexe" required>
+                                    <option value="" selected disabled>Sélectionnez Votre Genre</option>
                                     <option value="Homme">Homme</option>
                                     <option value="Femme">Femme</option>
                                 </select>
-                                <label for="Genre">Votre Genre</label>
+                                <label for="sexe">Votre Genre</label>
+                                @error('sexe')
+                                      <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <x-input name="email" label="email" type="email" />
 
                         </div>
 
                         <div class="col-md-6">
-                            <x-input name="telephone" label="telephone" type="text" />
+                            <x-input name="phone" label="telephone" type="text" />
                         </div>
+
                         <div class="col-12">
-                            <x-input name="adresse" label="Adresse" type="text" />
+                            <x-input name="address" label="Adresse" type="text" />
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-select" id="filiere">
-                                    <option selected disabled>Sélectionnez une filière</option>
+                                <select class="form-select @error('filiere') is-invalid @enderror" value="{{ old('filiere')}}"  id="filiere" name="filiere" required>
+                                    <option value="" selected disabled>Sélectionnez une filière</option>
                                     <option value="informatique de Gestion">Informatique de Gestion</option>
                                     <option value="Intelligence artificielle">Intelligence artificielle</option>
                                     <option value="Technique & Maintenance">Technique & Maintenance</option>
@@ -191,12 +206,17 @@
                                     <option value="compte, controle">Compté, Contrôle de Gestion et Audit</option>
                                 </select>
                                 <label for="filiere">Filière souhaitée</label>
+
+                                @error('filiere')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-select" id="niveau">
-                                    <option selected disabled>Sélectionnez un niveau</option>
+                                <select class="form-select @error('niveau') is-invalid @enderror" value="{{ old('niveau')}}" id="niveau" name="niveau" required>
+                                    <option value="" selected disabled>Sélectionnez un niveau</option>
                                     <option value="l1">Licence 1</option>
                                     <option value="l2">Licence 2</option>
                                     <option value="l3">Licence 3</option>
@@ -204,8 +224,13 @@
                                     <option value="M2">Master 2</option>
                                 </select>
                                 <label for="niveau">Niveau d'études</label>
+
+                                @error('niveau')
+                                  <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                         </div>
+                        
                         <div class="col-12 text-center">
                             <button class="btn py-3 px-5 wow fadeInUp" type="submit" style="background-color: #3C3882; color: white;" onmouseover="this.style.backgroundColor='white'; this.style.color='#3C3882'; this.style.border='1px solid #3C3882'" onmouseout="this.style.backgroundColor='#3C3882'; this.style.color='white'">
                                 Soumettre l'inscription
