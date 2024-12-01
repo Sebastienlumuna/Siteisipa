@@ -9,8 +9,7 @@
         <h1 class="display-2 text-white mb-4 animated slideInDown">Inscription en Ligne</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="A-propos fin.html">A propos</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('home')}}">Home</a></li>
                 <li class="breadcrumb-item text-primary" aria-current="page">Inscription</li>
             </ol>
         </nav>
@@ -230,7 +229,7 @@
                                 @enderror
                             </div>
                         </div>
-                        
+
                         <div class="col-12 text-center">
                             <button class="btn py-3 px-5 wow fadeInUp" type="submit" style="background-color: #3C3882; color: white;" onmouseover="this.style.backgroundColor='white'; this.style.color='#3C3882'; this.style.border='1px solid #3C3882'" onmouseout="this.style.backgroundColor='#3C3882'; this.style.color='white'">
                                 Soumettre l'inscription

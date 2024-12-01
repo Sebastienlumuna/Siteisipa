@@ -482,7 +482,7 @@
                 <div class="col-lg-4 col-12 mb-4 wow fadeInUp floating mx-auto text-center" data-wow-delay="0.5s">
                     <div class="card border-0 shadow-lg h-100 hover-shadow">
                         <div class="product-thumb position-relative overflow-hidden">
-                            <a href="{{ route('gfinaniere')}}" class="hover-zoom">
+                            <a href="{{ route('gfinanciere')}}" class="hover-zoom">
                                 <img src="{{ asset('img/Gest_Finance.jpeg')}}" class="img-fluid product-image" alt="Gestion Financière">
                             </a>
 
@@ -493,14 +493,14 @@
                             <div class="product-info p-4">
                                 <div class="card-body">
                                     <h5 class="product-title">
-                                        <a href="{{ route('gfinaniere')}}" class="text-dark text-decoration-none hover-text" onmouseover="this.style.color='#3C3882'" onmouseout="this.style.color=''">Gestion Financière</a>
+                                        <a href="{{ route('gfinanciere')}}" class="text-dark text-decoration-none hover-text" onmouseover="this.style.color='#3C3882'" onmouseout="this.style.color=''">Gestion Financière</a>
                                     </h5>
                                     <p class="card-text text-end"><i class="fas fa-graduation-cap me-2"></i>Master - 2 ans</p>
                                     <p class="card-text text-muted">Administration des réseaux et cybersécurité</p>
                                 </div>
                             </div>
                             <div class="text-center position-absolute w-100 bottom-0">
-                                <a href="{{ route('gfinaniere')}}" class="btn btn-primary rounded-pill px-4 hover-btn" style="background-color: #3C3882; opacity: 0; transition: all 0.3s ease;" onmouseover="this.style.opacity='1'; this.style.transform='translateY(-5px)'" onmouseout="this.style.opacity='0'; this.style.transform='translateY(0)'">Plus d'informations</a>
+                                <a href="{{ route('gfinanciere')}}" class="btn btn-primary rounded-pill px-4 hover-btn" style="background-color: #3C3882; opacity: 0; transition: all 0.3s ease;" onmouseover="this.style.opacity='1'; this.style.transform='translateY(-5px)'" onmouseout="this.style.opacity='0'; this.style.transform='translateY(0)'">Plus d'informations</a>
                             </div>
                         </div>
                     </div>

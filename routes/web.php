@@ -14,29 +14,34 @@ use App\Http\Controllers\InscriptionController;
 |
 */
 
-Route::get('/', [PagesController::class, 'index'])->name('home');
-Route::get('/Apropos', [PagesController::class, 'apropos'])->name('apropos');
-Route::get('/programmes', [PagesController::class, 'programmes'])->name('progrrammes');
-Route::get('/etudiants', [PagesController::class, 'etudiants'])->name('etudiants');
-Route::get('/filieres', [PagesController::class, 'filieres'])->name('filieres');
-Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+// route de pages
+Route::controller(PagesController::class)->group(function(){
+    Route::get('/', 'index')->name('home');
+    Route::get('/Apropos', 'apropos')->name('apropos');
+    Route::get('/programmes', 'programmes')->name('progrrammes');
+    Route::get('/etudiants', 'etudiants')->name('etudiants');
+    Route::get('/filieres', 'filieres')->name('filieres');
+    Route::get('/contact', 'contact')->name('contact');
 
+    // filieres
+
+    Route::get('/Filieres/informatique-de-gestion', 'infogestion')->name('infogestion');
+    Route::get('/Filieres/genie-logiciel', 'genilogiciel')->name('genilogiciel');
+    Route::get('/Filieres/communication-numerique', 'communication')->name('communication');
+    Route::get('/Filieres/technique-de-maintenance', 'tm')->name('tm');
+    Route::get('/Filieres/intelligence-artificielle', 'ia')->name('ia');
+    Route::get('/Filieres/systeme-informatique-admin-bdd', 'systemebdd')->name('systemebdd');
+    Route::get('/Filieres/banque', 'banque')->name('banque');
+    Route::get('/Filieres/marketing-digital', 'marketing')->name('marketing');
+    Route::get('/Filieres/fiscalite', 'fiscalite')->name('fiscalite');
+    Route::get('/Filieres/comptabilite', 'comptabilite')->name('comptabilite');
+    Route::get('/Filieres/gestion-financiere', 'gefinanciere')->name('gfinanciere');
+
+
+});
+
+// route d'inscription
 Route::controller(InscriptionController::class)->group(function(){
     Route::post('/inscription', 'admisions')->name('admission');
     Route::get('/inscription', 'inscriptionview')->name('inscription');
 });
-
-// view de filieres
-
-Route::get('/Filieres/informatique-de-gestion', [Pagescontroller::class, 'infogestion'])->name('infogestion');
-Route::get('/Filieres/genie-logiciel', [Pagescontroller::class, 'genilogiciel'])->name('genilogiciel');
-Route::get('/Filieres/communication-numerique', [Pagescontroller::class, 'communication'])->name('communication');
-Route::get('/Filieres/technique-de-maintenance', [Pagescontroller::class, 'tm'])->name('tm');
-
-Route::get('/Filieres/intelligence-artificielle', [Pagescontroller::class, 'ia'])->name('ia');
-Route::get('/Filieres/systeme-informatique-admin-bdd', [Pagescontroller::class, 'systemebdd'])->name('systemebdd');
-Route::get('/Filieres/banque', [Pagescontroller::class, 'banque'])->name('banque');
-Route::get('/Filieres/marketing-digital', [Pagescontroller::class, 'marketing'])->name('marketing');
-Route::get('/Filieres/fiscalite', [Pagescontroller::class, 'fiscalite'])->name('fiscalite');
-Route::get('/Filieres/comptabilite', [Pagescontroller::class, 'comptabilite'])->name('comptabilite');
-Route::get('/Filieres/gestion-financiere', [Pagescontroller::class, 'gfinanciere'])->name('gfinaniere');
