@@ -15,8 +15,13 @@ return [
     | any other location as required by the application or its packages.
     |
     */
+    // recuperation des informations des variables d'environnement
 
-    'name' => env('APP_NAME', 'ISIPA-KOMORIKO'),
+    'name'          =>  env('APP_NAME', ''),
+    'mail_username' =>  env('MAIL_USERNAME'),
+    'mail_password' =>  env('MAIL_PASSWORD'),
+    'mail_host'     =>  env('MAIL_HOST'),
+    'mail_port'     =>  env('MAIL_PORT'),
 
     /*
     |--------------------------------------------------------------------------

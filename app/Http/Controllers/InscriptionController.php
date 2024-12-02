@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admission;
+use App\Services\EmailService;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -13,8 +14,12 @@ class InscriptionController extends Controller
     return view('Pages.inscription');
    }
 
-        public function admisions(Request $request)
+        public function admisions(Request $request, EmailService $emailService)
         {
+            $email = $request->input('email');
+            $name = $request->input('nom');
+            $prenom = $request->input('prenom');
+
             $validation = $request->validate([
                 'nom' => 'required|string|max:255',
                 'postnom' => 'required|string|max:255',
@@ -28,6 +33,13 @@ class InscriptionController extends Controller
             ]);
             // Créer une nouvelle inscription
             $inscription = Admission::create($validation);
+            // Envoyer un email de confirmation
+            $Subject = 'Confirmation d\'enregistrement pour l\'admission';
+            $message = 'Salut ' .  $prenom . ' ' . $name.  ' ' . 'Votre inscription a été enregistrée avec succès. veillez passer au bureau d\'admission pour le reste du processus.';
+            $emailService->sendEmail($Subject, $email, $name, false, $message);
+
+            // Rediriger vers la page d'inscription avec un message de succès
+
             return redirect()->route('inscription')->with('success', 'Votre enregistrement  a été fait avec succès.'. 'Vous allez recevoir un email pour la suite.');
         }
 
