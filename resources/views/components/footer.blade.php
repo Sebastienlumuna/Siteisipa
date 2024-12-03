@@ -5,7 +5,7 @@
                 <h4 class="text-white mb-4">Nos adresses</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>14, Croisement avenue OUA - KOMORIKO C/KITAMBO Réf : Stade vélodrome</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(+243)819 338 004</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>isipa@gmail.com</p>                    <div class="d-flex pt-3">
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>isipaakomoriko@gmail.com</p>                    <div class="d-flex pt-3">
                     <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
@@ -15,11 +15,11 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-4">Liens rapides</h4>
-                <a class="btn btn-link" href="">Acceuil</a>
-                <a class="btn btn-link" href="">A Propos</a>
-                <a class="btn btn-link" href="">Programmes</a>
-                <a class="btn btn-link" href=""> Étudiants</a>
-                <a class="btn btn-link" href=""> Contact</a>
+                <a class="btn btn-link" href="{{ route('home')}}">Acceuil</a>
+                <a class="btn btn-link" href="{{ route('apropos')}}">A Propos</a>
+                <a class="btn btn-link" href="{{ route('progrrammes')}}">Formation</a>
+                <a class="btn btn-link" href="{{ route('etudiants')}}"> Étudiants</a>
+                <a class="btn btn-link" href="{{ route('contact')}}"> Contact</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-4">Heures d'ouverture</h4>

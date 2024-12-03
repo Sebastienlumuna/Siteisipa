@@ -64,7 +64,7 @@
             </div>
             <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
               <ul class="feature-list" style="list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 15px;"><i class="bi bi-check-circle-fill" style="color: #3C3882; margin-right: 10px;"></i> Stage garantis</li>
+                <li style="margin-bottom: 15px;"><i class="bi bi-check-circle-fill" style="color: #3C3882; margin-right: 10px;"></i> Stage garanti</li>
                 <li style="margin-bottom: 15px;"><i class="bi bi-check-circle-fill" style="color: #3C3882; margin-right: 10px;"></i> Suivi personnalisé</li>
                 <li style="margin-bottom: 15px;"><i class="bi bi-check-circle-fill" style="color: #3C3882; margin-right: 10px;"></i> Insertion professionnelle</li>
               </ul>
@@ -283,8 +283,9 @@
         <div class="row g-4">
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item rounded overflow-hidden pb-4">
-                    <img class="img-fluid mb-4" src="img/USERS.jpg" alt="">
+                    <img class="img-fluid mb-4" src="{{ asset('img/DG.jpg')}}" alt="">
                     <h5>ILUNGA KASAMBAY Casimir </h5>
+                    <span class="text-primary">Professeur des universités</span> <br>
                     <span class="text-primary">Directeur Général</span>
                     <ul class="team-social">
                         <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -296,8 +297,9 @@
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="team-item rounded overflow-hidden pb-4">
-                    <img class="img-fluid mb-4" src="img/USERS.jpg" alt="">
+                    <img class="img-fluid mb-4" src="{{ asset('img/Académique.jpg')}}" alt="">
                     <h5>KIKWATI NTOTILA Claude</h5>
+                    <span class="text-primary">Chef de Travaux (Doctorant)</span> <br>
                     <span class="text-primary">Sécretaire Général académique</span>
                     <ul class="team-social">
                         <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -309,8 +311,9 @@
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="team-item rounded overflow-hidden pb-4">
-                    <img class="img-fluid mb-4" src="img/USERS.jpg" alt="">
+                    <img class="img-fluid mb-4" src="{{ asset('img/milondo.jpg')}}" alt="">
                     <h5>MILONNDO KABAMBA Solonge</h5>
+                    <span class="text-primary">Chef de Travaux (Doctorant)</span> <br>
                     <span class="text-primary">Chef de Section</span>
                     <ul class="team-social">
                         <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -324,7 +327,8 @@
                 <div class="team-item rounded overflow-hidden pb-4">
                     <img class="img-fluid mb-4" src="img/USERS.jpg" alt="">
                     <h5>KINANGA MASALA Jean-Christ</h5>
-                    <span class="text-primary">Professeur Ordinaire</span>
+                    <span class="text-primary">Professeur Ordinaire</span> <br>
+                    <span class="text-primary">Chef de Section </span>
                     <ul class="team-social">
                         <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
                         <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
