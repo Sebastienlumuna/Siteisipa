@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pagescontroller;
 use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\Post\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,3 +46,6 @@ Route::controller(InscriptionController::class)->group(function(){
     Route::post('/inscription', 'admisions')->name('admission');
     Route::get('/inscription', 'inscriptionview')->name('inscription');
 });
+
+// Route de post
+require base_path('routes/controllers/post.php');
