@@ -2,7 +2,7 @@
 <div class="col-lg-4 col-12 mb-4 wow fadeInUp floating" data-wow-delay="0.1s">
     <div class="card border-0 shadow-lg h-100 hover-shadow">
       <div class="product-thumb position-relative overflow-hidden">
-        <a href="" class="hover-zoom">
+        <a href="{{ route('show', ['post'=>$post])}}" class="hover-zoom">
           <img src="{{ $post->image}}" class="img-fluid product-image" alt="actu" width="1232" height="816">
         </a>
       </div>
@@ -13,11 +13,11 @@
             <small class="text-danger"><a href="#" class="">Événement</a></small>
           </div>
           <h5 class="product-title">
-            <a href="" class="text-dark text-decoration-none hover-text" onmouseover="this.style.color='#3C3882'" onmouseout="this.style.color=''">
+            <a href="{{ route('show', ['post'=>$post])}}" class="text-dark text-decoration-none hover-text" onmouseover="this.style.color='#3C3882'" onmouseout="this.style.color=''">
                 {{ $post->titre}}
             </a>
           </h5>
-          <a href="l">
+          <a href="{{ route('show', ['post'=>$post])}}">
             <p class="text-muted">
             {{ $post->extrait}}
             </p>

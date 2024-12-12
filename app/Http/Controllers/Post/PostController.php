@@ -15,4 +15,11 @@ class PostController extends Controller
     $posts = Post::latest()->paginate(9); // Récupère les derniers posts
     return view('post.index', compact('posts'));
     }
+
+    public function show(Post $post): View
+    {
+        return view('post.show', [
+            'post' => $post,
+        ]);
+    }
 }
